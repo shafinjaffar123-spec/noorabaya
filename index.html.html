@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noor-Abayas | Elegance in Every Step</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--black:#171512;--gold:#c9a66b;--cream:#faf6ef;--white:#fff}
+body{font-family:Arial,sans-serif;background:var(--cream);color:var(--black)}
+header{background:var(--black);color:white;padding:20px 6%;display:flex;
+justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.logo{font-family:Georgia,serif;font-size:27px;color:var(--gold)}
+header p{font-size:12px;color:#ddd;margin-top:5px}
+nav{display:flex;gap:18px;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;font-size:14px}
+nav a:hover{color:var(--gold)}
+.hero{min-height:380px;padding:65px 7%;display:flex;align-items:center;
+background:linear-gradient(90deg,#211b16 0%,#211b1690 55%,transparent),
+url('https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1600&q=85') center/cover;
+color:white}
+.hero h1{font:clamp(38px,6vw,65px) Georgia,serif;margin:15px 0}
+.hero p{line-height:1.8}
+.gold{color:var(--gold)}
+.btn{display:inline-block;border:0;border-radius:5px;padding:13px 22px;
+background:var(--gold);color:#171512;font-weight:bold;cursor:pointer;
+text-decoration:none;margin-top:20px}
+section{padding:48px 6%}
+.heading{text-align:center;font:34px Georgia,serif;margin-bottom:12px}
+.sub{text-align:center;color:#716b63;margin-bottom:28px}
+.categories,.products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.category{position:relative;overflow:hidden;border-radius:8px;background:#ddd}
+.category img{width:100%;height:330px;object-fit:cover;display:block;transition:.3s}
+.category:hover img{transform:scale(1.04)}
+.category-info{padding:18px;text-align:center}
+.category-info h3{font:23px Georgia,serif}
+.category-info p{margin-top:8px;color:#68615a}
+.search-area{max-width:650px;margin:0 auto 30px}
+.search-area input{width:100%;padding:15px;border:1px solid #c9bda9;
+border-radius:7px;font-size:16px}
+.filters{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:15px}
+.filters button{padding:10px 16px;border:1px solid var(--gold);
+background:white;border-radius:20px;cursor:pointer}
+.filters button.active,.filters button:hover{background:var(--black);color:white}
+.product{background:white;border-radius:8px;overflow:hidden;
+box-shadow:0 3px 14px #0000000d}
+.product img{width:100%;height:320px;object-fit:cover;display:block}
+.product-info{padding:17px}
+.product h3{font:22px Georgia,serif}
+.price{color:#946a2e;font-weight:bold;font-size:19px;margin:12px 0}
+.product p{color:#68615a;line-height:1.6}
+.product .btn{margin-top:12px}
+.empty{text-align:center;padding:30px;grid-column:1/-1}
+#details{display:none;background:white;border-radius:10px;padding:24px;
+margin:30px auto;max-width:850px}
+.detail-layout{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center}
+.detail-layout img{width:100%;max-height:480px;object-fit:cover;border-radius:8px}
+#about{background:#eee4d6}
+.about-content{max-width:800px;margin:auto;text-align:center;line-height:1.9}
+.contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:35px}
+.contact-layout p{margin:15px 0;line-height:1.7}
+form input,form textarea{width:100%;padding:13px;margin:7px 0 14px;
+border:1px solid #cfc5b8;border-radius:5px;font:inherit}
+footer{background:var(--black);color:white;text-align:center;padding:28px}
+footer p{margin:8px}
+@media(max-width:700px){
+ header{justify-content:center;text-align:center}
+ nav{justify-content:center}
+ .hero{min-height:320px;padding:45px 6%}
+ .categories,.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ .category img,.product img{height:230px}
+ .contact-layout,.detail-layout{grid-template-columns:1fr}
+ section{padding:35px 4%}
+}
+@media(max-width:430px){
+ .categories,.products{grid-template-columns:1fr}
+ .category img,.product img{height:340px}
+}
+</style>
+</head>
+
+<body>
+<header>
+  <div>
+    <div class="logo">♛ Noor-Abayas</div>
+    <p>Elegance in Every Step</p>
+  </div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#categories">Collections</a>
+    <a href="#shop">Shop</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div>
+    <p class="gold">PREMIUM QUALITY ABAYAS</p>
+    <h1>Noor-Abayas</h1>
+    <p>Discover timeless modest fashion.</p>
+    <p>Elegance, comfort and beauty in every layer.</p>
+    <a class="btn" href="#shop">Explore Collection →</a>
+  </div>
+</section>
+
+<section id="categories">
+  <h2 class="heading">Our Collections</h2>
+  <p class="sub">Find the perfect abaya for every occasion.</p>
+
+  <div class="categories">
+    <article class="category">
+      <img src="https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?auto=format&fit=crop&w=700&q=80"
+           alt="Classic Abaya" loading="lazy">
+      <div class="category-info">
+        <h3>Classic Abaya</h3>
+        <p>Simple. Elegant. Timeless.</p>
+        <button class="btn" onclick="chooseCategory('Classic')">View Collection</button>
+      </div>
+    </article>
+
+    <article class="category">
+      <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=700&q=80"
+           alt="Luxury Abaya" loading="lazy">
+      <div class="category-info">
+        <h3>Luxury Abaya</h3>
+        <p>Beautiful designs for your wardrobe.</p>
+        <button class="btn" onclick="chooseCategory('Luxury')">View Collection</button>
+      </div>
+    </article>
+
+    <article class="category">
+      <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=700&q=80"
+           alt="Premium Occasion Abaya" loading="lazy">
+      <div class="category-info">
+        <h3>Premium Occasion Abaya</h3>
+        <p>For your special moments.</p>
+        <button class="btn" onclick="chooseCategory('Premium')">View Collection</button>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="shop">
+  <h2 class="heading">Shop Our Abayas</h2>
+  <p class="sub">Search by name or explore a collection.</p>
+
+  <div class="search-area">
+    <input id="search" type="search"
+      placeholder="Search Classic, Luxury, Premium..."
+      oninput="renderProducts()">
+
+    <div class="filters">
+      <button class="active" onclick="chooseCategory('All',this)">All Abayas</button>
+      <button onclick="chooseCategory('Classic',this)">Classic</button>
+      <button onclick="chooseCategory('Luxury',this)">Luxury</button>
+      <button onclick="chooseCategory('Premium',this)">Premium</button>
+    </div>
+  </div>
+
+  <div class="products" id="products"></div>
+
+  <div id="details">
+    <div class="detail-layout">
+      <img id="detailImage" src="" alt="Selected abaya">
+      <div>
+        <h2 id="detailName"></h2>
+        <p class="price" id="detailPrice"></p>
+        <p id="detailDescription"></p>
+        <p style="margin-top:15px">Available sizes: S, M, L, XL</p>
+        <a id="orderLink" class="btn" href="#" target="_blank"
+           rel="noopener">Order on WhatsApp</a>
+        <br>
+        <button class="btn" onclick="closeDetails()">Back to Collection</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="about-content">
+    <h2 class="heading">About Noor-Abayas</h2>
+    <p>
+      At Noor-Abayas, we believe modest fashion can be beautiful,
+      comfortable and timeless. Discover styles for everyday wear
+      and special occasions.
+    </p>
+    <p class="gold"><strong>Your Style. Our Priority.</strong></p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="heading">Contact Us</h2>
+  <p class="sub">Questions about sizes, prices or orders? Get in touch.</p>
+
+  <div class="contact-layout">
+    <div>
+      <h3>Customer Support</h3>
+      <p><strong>Name:</strong> Shafeen</p>
+      <p><strong>Phone / WhatsApp:</strong> 03151230971</p>
+      <p><strong>Business:</strong> Noor-Abayas</p>
+      <p>For product enquiries and orders, contact us on WhatsApp.</p>
+      <a class="btn" href="https://wa.me/923151230971" target="_blank"
+         rel="noopener">Chat on WhatsApp</a>
+    </div>
+
+    <form id="contactForm">
+      <label for="customerName">Your Name</label>
+      <input id="customerName" required placeholder="Enter your name">
+
+      <label for="customerPhone">Your Phone Number</label>
+      <input id="customerPhone" required placeholder="Enter your phone number">
+
+      <label for="message">Your Message</label>
+      <textarea id="message" rows="4" required
+        placeholder="How can we help?"></textarea>
+
+      <button class="btn" type="submit">Send via WhatsApp</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="logo">♛ Noor-Abayas</div>
+  <p>Elegance in Every Step</p>
+  <p>© <span id="year"></span> Noor-Abayas. All rights reserved.</p>
+</footer>
+
+<script>
+const products = [
+  {
+    name:"Classic Black Abaya",
+    category:"Classic",
+    price:4500,
+    image:"https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?auto=format&fit=crop&w=800&q=85",
+    description:"An elegant everyday style for a timeless modest look."
+  },
+  {
+    name:"Classic Everyday Abaya",
+    category:"Classic",
+    price:5000,
+    image:"https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=800&q=85",
+    description:"A versatile design for daily wear and comfortable styling."
+  },
+  {
+    name:"Luxury Elegant Abaya",
+    category:"Luxury",
+    price:7500,
+    image:"https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=85",
+    description:"A refined design for customers who love elegant fashion."
+  },
+  {
+    name:"Luxury Evening Abaya",
+    category:"Luxury",
+    price:8200,
+    image:"https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=85",
+    description:"A sophisticated look for dinners and evening occasions."
+  },
+  {
+    name:"Premium Occasion Abaya",
+    category:"Premium",
+    price:8500,
+    image:"https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=85",
+    description:"A statement style for celebrations and special moments."
+  },
+  {
+    name:"Premium Royal Abaya",
+    category:"Premium",
+    price:9500,
+    image:"https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=800&q=85",
+    description:"An occasion-inspired style for an elegant wardrobe."
+  }
+];
+
+let activeCategory = "All";
+
+function renderProducts(){
+  const query = document.getElementById("search").value.toLowerCase().trim();
+  const list = products.filter(p =>
+    (activeCategory === "All" || p.category === activeCategory) &&
+    (p.name.toLowerCase().includes(query) ||
+     p.category.toLowerCase().includes(query))
+  );
+
+  const container = document.getElementById("products");
+
+  if(!list.length){
+    container.innerHTML = '<p class="empty">No matching abayas found. Try another search.</p>';
+    return;
+  }
+
+  container.innerHTML = list.map(p => `
+    <article class="product">
+      <img src="${p.image}" alt="${p.name}" loading="lazy">
+      <div class="product-info">
+        <h3>${p.name}</h3>
+        <div class="price">Rs ${p.price.toLocaleString("en-PK")}</div>
+        <p>${p.description}</p>
+        <button class="btn" onclick="showDetails('${p.name}')">View Details</button>
+      </div>
+    </article>
+  `).join("");
+}
+
+function chooseCategory(category,button){
+  activeCategory = category;
+
+  document.querySelectorAll(".filters button").forEach(b=>{
+    b.classList.remove("active");
+  });
+  if(button) button.classList.add("active");
+
+  renderProducts();
+  document.getElementById("shop").scrollIntoView({behavior:"smooth"});
+}
+
+function showDetails(name){
+  const p = products.find(item => item.name === name);
+  if(!p) return;
+
+  document.getElementById("detailImage").src = p.image;
+  document.getElementById("detailImage").alt = p.name;
+  document.getElementById("detailName").textContent = p.name;
+  document.getElementById("detailPrice").textContent =
+    "Rs " + p.price.toLocaleString("en-PK");
+  document.getElementById("detailDescription").textContent = p.description;
+
+  const text = "Assalamualaikum, I am interested in " + p.name +
+    ". Listed price: Rs " + p.price.toLocaleString("en-PK") +
+    ". Please confirm availability, sizes and delivery to the UK.";
+
+  document.getElementById("orderLink").href =
+    "https://wa.me/923151230971?text=" + encodeURIComponent(text);
+
+  document.getElementById("details").style.display = "block";
+  document.getElementById("details").scrollIntoView({behavior:"smooth"});
+}
+
+function closeDetails(){
+  document.getElementById("details").style.display = "none";
+  document.getElementById("shop").scrollIntoView({behavior:"smooth"});
+}
+
+document.getElementById("contactForm").addEventListener("submit",function(e){
+  e.preventDefault();
+
+  const name = document.getElementById("customerName").value.trim();
+  const phone = document.getElementById("customerPhone").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  const text = "Noor-Abayas enquiry\nName: " + name +
+    "\nPhone: " + phone + "\nMessage: " + message;
+
+  window.open("https://wa.me/923151230971?text=" +
+    encodeURIComponent(text),"_blank");
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
+renderProducts();
+</script>
+</body>
+</html>
